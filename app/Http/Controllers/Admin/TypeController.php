@@ -82,7 +82,7 @@ class TypeController extends Controller
         $data = $request->validated();
         $type->slug = Str::slug($data['name'], '-');
         $type->update($data);
-        return to_route('admin.types.index')->with('edit', "Project modified successfully!");
+        return to_route('admin.types.index')->with('edit', "Type modified successfully!");
     }
 
     /**
