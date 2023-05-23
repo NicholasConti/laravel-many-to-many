@@ -48,8 +48,7 @@
                     <label class="form-check-label" for="tecs">{{$tec->name}}</label>
                 </div>
             @endforeach
-            
-          </div>
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
    </form>
