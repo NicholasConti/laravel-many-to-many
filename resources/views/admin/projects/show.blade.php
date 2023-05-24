@@ -18,6 +18,14 @@
         @if ($project->type_id) 
         <h6 class="card-subtitle mb-2 text-body-secondary">Type: {{ $project->type->name}}</h6>
         @endif
+        
+        <h6>Technologies:</h6>
+       @forelse ($project->technologies as $techs)
+       <span class="badge text-bg-secondary">{{$techs->name}}</span>
+       @empty
+       <span class="badge text-bg-secondary">No Techs selected</span>
+       @endforelse
+        
       </div>
     </div>
     <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-warning">Edit</a>
